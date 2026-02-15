@@ -4,13 +4,13 @@
 #include <string>
 #include <iostream>
 #include <stdint.h>
-#include <math.h>
 
 class Fixed
 {
     private:
         int _rawBits;
         static int const _Bits = 8;
+        
     public:
         Fixed();
         Fixed(int const n);
@@ -24,8 +24,6 @@ class Fixed
         
         float toFloat(void) const;
         int toInt(void) const;
-        
-
 };
 
 std::ostream & operator<<(std::ostream &o, Fixed const &other);
